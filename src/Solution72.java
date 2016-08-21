@@ -11,7 +11,7 @@
  * @author JiangJiafu
  *
  */
-public class Solution {
+public class Solution72 {
     public int minDistance(String src, String dest) {
         int[][] f = new int[dest.length() + 1][src.length() + 1];
         f[0][0] = 0;

@@ -1,8 +1,6 @@
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * 题目：https://leetcode.com/problems/minimum-window-substring/
@@ -16,7 +14,7 @@ import java.util.Set;
  *
  * @author JiangJiafu
  */
-public class Solution {
+public class Solution76 {
     public String minWindow(String s, String t) {
         // targetCount中记录目标字符串中每个字符出现的个数
         Map<Character, Integer> targetCount = new HashMap<>();
@@ -76,7 +74,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution76 solution = new Solution76();
 
     }
 }

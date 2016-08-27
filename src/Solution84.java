@@ -5,7 +5,7 @@ import java.util.Stack;
  *
  * 思路：http://www.geeksforgeeks.org/largest-rectangle-under-histogram/
  */
-public class Solution {
+public class Solution84 {
     public int largestRectangleArea(int[] height) {
         int len = height.length;
         Stack<Integer> s = new Stack<Integer>();

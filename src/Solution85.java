@@ -7,7 +7,7 @@ import java.util.Stack;
  *       将85题中的图，一层一层地构造出84题中的矩阵，调用84题的计算方法，算出最大
  *       矩形面积，最终的答案就是85题的答案。
  */
-public class Solution {
+public class Solution85 {
     public int maximalRectangle(char[][] matrix) {
 
         if (matrix.length == 0) {
@@ -71,7 +71,7 @@ public class Solution {
 
     public static void main(String[] args) {
         int [] a = {6, 2 ,5, 4, 5, 4,1,6};
-        Solution s = new Solution();
+        Solution85 s = new Solution85();
         System.out.println(s.largestRectangleArea(a));
     }
 }

@@ -22,4 +22,10 @@ public class Solution84 {
         }
         return maxArea;
     }
+
+    public static void main(String[] args[]) {
+        int [] a = {6, 2 ,5, 4, 5, 4,1,6};
+        Solution84 s = new Solution84();
+        System.out.println(s.largestRectangleArea(a));
+    }
 }

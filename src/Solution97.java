@@ -2,20 +2,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Ô­Ìâ£ºhttps://leetcode.com/problems/interleaving-string/
+ * åŸé¢˜ï¼šhttps://leetcode.com/problems/interleaving-string/
  *
- * Ë¼Â·£º
- * Ê¹ÓÃ¶¯Ì¬¹æÔò£¬
- * Áîans(i, j)±íÊ¾s1[0:i]£¨s1µÄÇ°i¸ö×Ö·û£¬ÏÂÍ¬£©£¬s2[0:j]ÊÇ·ñºÍs3[0:i+j]ÊÇ
- * interleavingµÄ¹ØÏµ£¬ans(i,j) ==1±íÊ¾ÊÇ£¬==0±íÊ¾·ñ¡£
- * ÄÇÃ´£¬ÎÒÃÇÓĞµİÍÆÊ½£º
+ * æ€è·¯ï¼š
+ * ä½¿ç”¨åŠ¨æ€è§„åˆ™ï¼Œ
+ * ä»¤ans(i, j)è¡¨ç¤ºs1[0:i]ï¼ˆs1çš„å‰iä¸ªå­—ç¬¦ï¼Œä¸‹åŒï¼‰ï¼Œs2[0:j]æ˜¯å¦å’Œs3[0:i+j]æ˜¯
+ * interleavingçš„å…³ç³»ï¼Œans(i,j) ==1è¡¨ç¤ºæ˜¯ï¼Œ==0è¡¨ç¤ºå¦ã€‚
+ * é‚£ä¹ˆï¼Œæˆ‘ä»¬æœ‰é€’æ¨å¼ï¼š
  * ans[i,j] = 1 if ans[i][j-1] == 1 && s2[j-1]==s3[i+j-1] or ans[i-1][j] == 1 && s1[i-1]==s3[i+j-1]
- * ans[i,j] = 0 ÆäËüÇé¿ö
+ * ans[i,j] = 0 å…¶å®ƒæƒ…å†µ
  *
- * ans[s1.length,s2.length]¼´Îª´ğ°¸
+ * ans[s1.length,s2.length]å³ä¸ºç­”æ¡ˆ
  *
  */
-public class Solution {
+public class Solution97 {
 
     public boolean checkCharNumber(String s1, String s2, String s3) {
         Map<Character, Integer> set1 = new HashMap<>();
@@ -72,12 +72,12 @@ public class Solution {
             return false;
         }
 
-        // ÅĞ¶Ï×Ö·ûÊıÊÇ·ñÒ»ÖÂ
+        // åˆ¤æ–­å­—ç¬¦æ•°æ˜¯å¦ä¸€è‡´
         if (!checkCharNumber(s1, s2, s3)) {
             return false;
         }
 
-        // Ê¹ÓÃ¶¯Ì¬¹æÔò
+        // ä½¿ç”¨åŠ¨æ€è§„åˆ™
         int[][] ans = new int[s1.length() + 1][s2.length() + 1];
         ans[0][0] = 1;
         for (int i = 1; i <= s2.length(); i++) {
@@ -96,8 +96,8 @@ public class Solution {
         }
         for (int i = 1; i <= s1.length(); i++) {
             for (int j = 1; j <= s2.length(); j++) {
-                // Çóans[i][j]
-                // Èç¹ûans[i][j-1]ÎªÕæ£¬ÇÒs2[j-1]=s3[i+j-1]
+                // æ±‚ans[i][j]
+                // å¦‚æœans[i][j-1]ä¸ºçœŸï¼Œä¸”s2[j-1]=s3[i+j-1]
                 if (ans[i][j-1] == 1 && s2.charAt(j-1) == s3.charAt(i+j-1)) {
                     ans[i][j] = 1;
                 } else if (ans[i-1][j] == 1 && s1.charAt(i-1) == s3.charAt(i+j-1)) {

@@ -1,4 +1,4 @@
-public class Solution {
+public class Solution115 {
     public int numDistinct(String s, String t) {
         int[][] dp = new int[s.length() + 1][t.length() + 1];
         // 初始化动态规划表

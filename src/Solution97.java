@@ -110,12 +110,4 @@ public class Solution97 {
         return ans[s1.length()][s2.length()] == 1;
 
     }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        String s1 = "a";
-        String s2 = "b";
-        String s3 = "ab";
-        System.out.println(solution.isInterleave(s1, s2, s3));
-    }
 }
